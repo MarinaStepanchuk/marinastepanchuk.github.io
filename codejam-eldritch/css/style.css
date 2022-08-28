@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Sunday';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/cd2f1-36d91_sunday.ttf'); 
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 480px;
+    min-height: 100vh;
+    font-family: 'Sunday', 'Arial', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: url("../assets/bg.jpg") left/cover, rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.ancient-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 36%;
+    font-size: 20px;
+    height: 100vh;
+}
+
+.ancient {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.ancient-card {
+    width: 35%;
+    transition: all 0.6s;
+    cursor: pointer;
+    border: #00FFCB solid 2px;
+}
+
+.all-levels {
+    width: 60%;
+    font-size: 12px;
+    height: 30px;
+    margin-top: 10px;
+    font-family: 'Sunday', 'Arial', sans-serif;
+    margin-bottom: 50px;
+}
+
+.shuffle-deck {
+    position: absolute;
+    top: 40%;
+    left: 78%;
+    width: 10%;
+    height: 50px;
+    font-family: 'Sunday', 'Arial', sans-serif;
+    outline: none;
+	border: 1px solid #fff;
+	border-radius: 50px;
+    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+	cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.shuffle-deck::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+}
+  
+.shuffle-deck:hover, .shuffle-deck:focus {
+    color: #313133;
+    transform: translateY(-6px);
+}
+  
+.shuffle-deck:hover::before, .shuffle-deck:focus::before {
+    opacity: 1;
+}
+  
+.shuffle-deck::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+  
+.shuffle-deck:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+}
+  
+@keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 110px;
+    gap: 35px;
+    width: 30%;
+    margin-right: 40px;
+    opacity: 0;
+    visibility: hidden;
+    translate: all linear 0.5s;
+}
+
+.current-stage {
+    margin-top: 15px;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.green {
+    background-color: rgb(46, 94, 19);
+}
+
+.brown {
+    background-color: rgb(156, 102, 50);
+}
+
+.blue {
+    background-color: rgb(54, 103, 160);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 35%;
+    border: #00FFCB solid 2px;
+}
+
+.cover-card {
+    cursor: pointer;
+}
+
+.play-card {
+    opacity: 0;
+    visibility: hidden;
+    translate: all linear 0.5s;
+}
+
+.show {
+    opacity: 1;
+    visibility: inherit;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scale {
+    transform: scale(1.15);
+}
+
+.deck-text {
+    width: 190%;
+    position: relative;
+    left: 30px;
+    align-self: flex-end;    
+}
+
+.deck {
+    width: 190%;
+    height: 137px;
+    position: relative;
+    left: 30px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+.deck-card {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+}

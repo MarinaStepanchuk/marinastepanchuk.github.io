@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eldritch Horror</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="ancient-wrapper">
+        <p class="ancient-text">Выберите карту древнего:</p>
+        <div class="ancient">
+            <img class="ancient-card" id="azathoth" src="./assets/Ancients/Azathoth.png" alt="Azathoth-card">
+            <img class="ancient-card" id="cthulhu" src="./assets/Ancients/Cthulthu.png" alt="Cthulthu-card">
+            <img class="ancient-card" id="iogSothoth" src="./assets/Ancients/IogSothoth.png" alt="IogSothoth-card">
+            <img class="ancient-card" id="shubNiggurath" src="./assets/Ancients/ShubNiggurath.png" alt="ShubNiggurath-card">
+        </div>
+        <div class="level">
+            <p>Уровень сложности:</p>
+            <select class="all-levels" name="levels" id="lev">
+                <option value="choice" selected>Выберите уровень</option>
+                <option value="veryLight">Очень лёгкий</option>
+                <option value="light">Лёгкий</option>
+                <option value="average">Средний</option>
+                <option value="complicated">Высокий</option>
+                <option value="veryComplicated">Очень высокий</option>
+            </select>
+        </div>
+    </div>
+    <button class="shuffle-deck">Замешать колоду</button>
+    <div class="card-wrapper">
+        <div class="stage-container">
+            <div class="current-stage stage1">
+                <span>Первая стадия:</span>
+                <div class="dots-container">
+                    <div class="dot green"></div>
+                    <div class="dot brown"></div>
+                    <div class="dot blue"></div>
+                </div>
+            </div>
+            <div class="current-stage stage2">
+                <span>Вторая стадия:</span>
+                <div class="dots-container">
+                    <div class="dot green"></div>
+                    <div class="dot brown"></div>
+                    <div class="dot blue"></div>
+                </div>
+            </div>
+            <div class="current-stage stage3">
+                <span>Третья стадия:</span>
+                <div class="dots-container">
+                    <div class="dot green"></div>
+                    <div class="dot brown"></div>
+                    <div class="dot blue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <img class="card cover-card" src="./assets/mythicCardBackground.png" alt="cover-card">
+            <img class="card play-card" alt="cover-card">
+        </div>
+        <span class="deck-text">Игральная колода:</span>
+        <div class="deck">
+        </div>
+    </div>
+    <script type="module" defer src="js/index.js"></script>
+</body>
+</html>
